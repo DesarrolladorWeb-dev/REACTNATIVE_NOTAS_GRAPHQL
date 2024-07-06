@@ -1,0 +1,87 @@
+----------------------------------------------------------
+
+mutation Mutation{
+  actualizarProyecto(
+    id: "661b0e45f8ce085d24701988"
+    input:{
+      nombre: "Aplicacion en Graft Actualizado"
+  }){
+    nombre
+    id
+  }
+}
+  
+}
+----------
+{
+  "input": {
+    "email": null,
+    "password": null
+  },
+  "actualizarProyectoId": null
+}
+------------------------------------------------------
+Headers : Authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWFlOGI1ZWViMzRhYzExOGMyZGVjYiIsImVtYWlsIjoiY29ycmVvMTIzQGNvcnJlby5jb20iLCJpYXQiOjE3MTMwNDgzMzIsImV4cCI6MTcxMzA1NTUzMn0._IP85CbM8IsO5eHrsr9Q3P05_kdQLTjgIhO96qvUZJc
+
+--------------------------------------------------------
+AQUI CREA TOCKEN
+
+mutation Mutation {
+  autenticarUsuario(input: {
+    email: "correo123@correo.com"
+    password: "123456"
+  }) {
+    token
+  }
+}
+
+
+--------------------------------------------------------
+mutation Mutation {
+  actualizarTarea(
+    id: "661b1fc91926b9a855e5bc54"
+    input: {
+    nombre: "Seleccionar DB Actualizado"
+    proyecto:"661b1586ff057d9f9d92e4d3"
+  }
+    estado: true
+  ){
+    nombre
+    id
+    estado
+    proyecto
+  }
+}
+------------------------------------------------------
+Headers : Authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWFlOGI1ZWViMzRhYzExOGMyZGVjYiIsImVtYWlsIjoiY29ycmVvMTIzQGNvcnJlby5jb20iLCJpYXQiOjE3MTMwNDgzMzIsImV4cCI6MTcxMzA1NTUzMn0._IP85CbM8IsO5eHrsr9Q3P05_kdQLTjgIhO96qvUZJc
+------------------------------------------------------
+
+mutation Mutation {
+  eliminarTarea(id: "661b1fc91926b9a855e5bc54")
+}
+
+-----
+{
+  "eliminarTareaId": null
+}
+------------------------------------------------------
+Headers : Authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWFlOGI1ZWViMzRhYzExOGMyZGVjYiIsImVtYWlsIjoiY29ycmVvMTIzQGNvcnJlby5jb20iLCJpYXQiOjE3MTMwNDgzMzIsImV4cCI6MTcxMzA1NTUzMn0._IP85CbM8IsO5eHrsr9Q3P05_kdQLTjgIhO96qvUZJc
+------------------------------------------------------
+CREAR USUARIO
+mutation crearUsuario($input: UsuarioInput ){
+  crearUsuario(input: $input)
+}
+----
+{
+  "input": {
+    "nombre": "Juan",
+    "email": "correo@correo.com",
+    "password": "123456"
+
+}
+------------------------------------------------------
+Headers : Authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWFlOGI1ZWViMzRhYzExOGMyZGVjYiIsImVtYWlsIjoiY29ycmVvMTIzQGNvcnJlby5jb20iLCJpYXQiOjE3MTMwNDgzMzIsImV4cCI6MTcxMzA1NTUzMn0._IP85CbM8IsO5eHrsr9Q3P05_kdQLTjgIhO96qvUZJc
+
+
+
+
